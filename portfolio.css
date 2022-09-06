@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,300&family=Raleway:ital,wght@0,500;0,600;1,200;1,500&family=Roboto+Condensed:ital,wght@1,300&family=Roboto:ital,wght@0,500;1,300&display=swap');
 
+
+.container{
+    --bs-gutter-x: -0,5rem !important;
+}
 *{
     box-sizing: border-box;
-    margin: 0px;
 }
 
 html{
@@ -10,7 +13,7 @@ html{
 }
 body{
     font-family: 'Raleway';
-    background-color: #F4F6F5 ;
+    background-color: hsl(120, 10%, 97%) !important;
     color: white;
     overflow-x: hidden;
     position: relative;
@@ -38,10 +41,10 @@ body{
     height: 4px;
     background: #F34044;
     position: absolute;
-    top: 34Px;
+    top: 40Px;
 }
 
-.personal-info, .skills-info, .addT-info{
+.personal-info, .skills-info{
     background-color: white;
     margin: 10px;
     width: 320px;
@@ -56,6 +59,10 @@ body{
 .about .ERTY svg{
     margin-top: 10px;
     margin-bottom: 20px;
+}
+.personal-info{
+    /* margin: auto; */
+    margin-top: 173px !important;
 }
 
 ul{
@@ -99,17 +106,19 @@ h3{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     position: relative;
 }
 .photo-container{
     width: 400px;
     margin-bottom: 34px;
 }
+
+.ERTY{
+    margin-top: 30px !important;
+}
 .MFAI{
     border-radius: 20px;
-    margin-left: 20px;
-    margin-top: 20px;
     width: 100%;
 }
 .about-main{
@@ -129,20 +138,24 @@ h2{
 .ERTY{
     display: flex;
 }
-.personal-info{
+
+.skills-info span, .skills-info ul{
+    align-self: baseline;
+}
+/* .personal-info{
     position: relative;
     top: 9%;
     left: 12%;
-}
+} */
 
-.skills-info{
+/* .skills-info{
     position: relative;
     left: 26%;
     top: -37%;
-}
+} */
 
 
-.cloud-ph{
+/* .cloud-ph{
     position: absolute;
     top: -13%;
     left: -47%;
@@ -154,7 +167,7 @@ h2{
     top: -321%;
     width: 46%;
     z-index: -1;
-}
+} */
 
 .my-header h1{
     color: #1E3E3E;
@@ -166,11 +179,11 @@ h2{
 
 
 footer{
-    width: auto;
+    width: 100%;
     height: fit-content;
     color: black;
     background-color: white;
-    margin: -8px;
+    border: 20px #F34044;
     text-align: center;
     padding-bottom: 13px;
     border-radius: 4px 4px 0 0;
@@ -218,6 +231,7 @@ footer .social-container svg{
 video{
     width: 100%;
     height: 100%;
+    background-size: contain;
 }
 
 footer a:hover{
@@ -233,15 +247,27 @@ video::before{
 
 .wrt{
     margin-top: 12px;
-    font-size: 14px;
     padding: 10px;
     background: transparent;
     position: absolute;
 }
 
 .wrt h1{
+    font-size: 25px !important;
     margin-left: 35px;
     color: rgb(0, 0, 0);
+}
+
+h1{
+    font-size: 32px !important;
+}
+
+h2{
+    font-size: 26px !important;
+}
+
+h3{
+    font-size: 20px !important;
 }
 
 .ERTY ul li i {
@@ -253,27 +279,29 @@ video::before{
 
 .hexa-3{
     position: absolute;
-    left: 109%;
-    top: -26%;
+    left: 98%;
+    top: -40%;
     transform: scale(2);
 }
 .hexa-2{
     position: absolute;
-    left: 79%;
-    top: 53%;
+    left: -9%;
+    top: 69%;
     transform: scale(2);
+    z-index: -1;
 }
 
 .hexa-1{
     position: absolute;
-    left: -1%;
-    top: 33%;
+    left: 89%;
+    top: 81%;
 }
 
 .hexa-0{
-    position: relative;
-    left: -11%;
-    top: 34%;
+    position: absolute;
+    left: -55%;
+    top: -7%;
+    z-index: -1;
 }
 
 
@@ -292,11 +320,16 @@ section{
     margin-right: 10px;
     z-index: 1000;
 }
-nav .container{
-}
 
 nav .containerr div{
     margin-top: 5px;
+}
+/* .containerr{
+    visibility: hidden;
+} */
+
+.show-nav{
+    visibility: visible;
 }
 
 .btnn{
@@ -316,16 +349,6 @@ nav .containerr div{
     margin-right: 10px;
 }
 
-/* .about-nav{
-    margin-bottom: 20px;
-    position: absolute;
-    top: 73%;
-}
-
-.home-nav{
-    position: absolute;
-    top: 59%;
-} */
 
 nav i {
     font-size: 27px;
@@ -339,15 +362,17 @@ nav a span{
     font-size: large;
 }
 
-nav .container .about-nav:hover span{
+
+  nav .containerr div:hover span, nav .containerr a:hover span{
   display: block;
 }
 
-nav .about-nav a:hover, nav .projects-nav a:hover,
-nav .container .about-nav div:hover a, nav .container .about-nav div:hover a {
-    transition: all 0.3s ease-in;
+nav .containerr div:hover a, nav .containerr a:hover{
     width: 100%;
+    transition: all 0.3s ease-in;
 }
+
+
 
 footer i {
 
@@ -355,24 +380,28 @@ footer i {
     font-weight: bold;
 }
 
+main{
+    margin-bottom: 70px;
+}
+
 @media(max-width: 768px){
 
 }
 
-@media (max-width: 1000px) {
-    body{
-        overflow: visible;
-    }
-    
+
+
+
+@media(max-width: 1100px){
     video{
         margin-top: 60px;
-        height: 500px;
+        /* height: 500px; */
     }
     .mail{
         display: none;
     }
     .wrt{
         margin-top: 7px;
+        z-index: 1000001;
     }
 
     .wrt h1{
@@ -419,40 +448,168 @@ footer i {
         /* justify-content: center; */
         height: 60px;
         z-index: 1000000;
-    }
-
-    .about-main{
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .info-container{
-        display: flex;
-        flex-direction: column;
-    }
-    .personal-info,.skills-info{
-        position: initial;
-        margin-top: 50px;
-        
-    }
-    .skills-info span {
-        margin-right: auto;
-    }
-
-    .skills-info{
-        margin-bottom: 50px;
-    }
-    .hexa-0,.hexa-1,.hexa-2,.hexa-3{
-        display: none;
+    }    
+    .container{
+        --bs-gutter-x: 1,5rem !important;
     }
 
     .ERTY{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        margin-top: 0 !important;
     }
+    .personal-info{
+        margin-top: 46px !important;
+    }
+}
 
+@media(max-width: 566px){
+    .about{
+        max-width: 400px;
+    }
+}
+
+
+.underline {
+    background-image: linear-gradient(120deg, #F34044 0%, hsl(120, 10%, 97%) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+  }
+
+.preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  z-index: 9999999;
+}
+
+.hide-preloader {
+    visibility: hidden;
+    z-index: -9999;
+}
+
+.Cookie-Wrapper svg{
+    width: 40px;
     
+}
+
+
+.Cookie-Wrapper{
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    background-color: white;
+    border-radius: 40px ;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s ease-in-out;
+}
+
+.Cookie-Content{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.Cookie-Text{
+    margin-left: 10px;
+    color: color ;
+}
+
+.Cookie-Text a {
+    text-decoration: none;
+    color: black ;
+}
+.Cookie-Text a:hover{
+    color: #1E3E3E;
+}
+
+
+.Cookie-Icon{
+    position: relative;
+}
+.cookie-bite{
+    position: absolute;
+    left: 0px;
+    opacity: 0;
+}
+
+.Cookie-Button{
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    padding: 6px 20px;
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+.hide-cookie{
+    opacity: 0;
+}
+
+.show-cookie{
+    opacity: 1;
+}
+
+.Cookie-Wrapper.hide-wrap{
+    transform: translate(0,200%);
+}
+
+.popup-wrapper{
+    position: fixed;
+    background-color: white;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -99999999 ;
+    visibility: hidden;
+    overflow-y: scroll !important;
+    transition: 0.6s ;
+}
+.show-popup{
+    opacity: 98%;
+    visibility: visible;
+    z-index: 99999999 ;
+}
+
+.close-popup{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.popup-thi{
+    padding: 40px;
+    margin-top: 20px
+}
+
+.popup-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.popup-content{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.line-pop{
+    margin-left: auto;
+    margin-right: auto;
+    width: 87px;
+    border: 2px solid #1E3E3E ;
 }
