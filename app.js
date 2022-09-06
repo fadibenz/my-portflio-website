@@ -1,10 +1,10 @@
 
-// preloader
-// const pre = document.querySelector(".preloader")
+preloader
+const pre = document.querySelector(".preloader")
 
-// window.addEventListener("load",()=>{
-//     pre.classList.add("hide-preloader")
-// })
+window.addEventListener("load",()=>{
+    pre.classList.add("hide-preloader")
+})
 
 // cookie 
 const accept = document.querySelector(".Cookie-Button")
