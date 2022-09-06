@@ -441,6 +441,9 @@ main{
     .hexa-3{
         display:none;
     }
+    .hexa-1{
+        display:none;
+    }
 
     .nav-bar {
         background-color: white;
