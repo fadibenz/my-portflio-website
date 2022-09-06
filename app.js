@@ -1,5 +1,5 @@
 
-preloader
+// preloader
 const pre = document.querySelector(".preloader")
 
 window.addEventListener("load",()=>{
