@@ -478,9 +478,14 @@ main{
     .container{
         max-width: 300px;
     }
+    .skills-info{
+        margin-top: 40px !important;
+    }
+    .skills-info,.personal-info{
+        margin: auto;
+    }
+
 }
-
-
 
 
 /* .underline {
