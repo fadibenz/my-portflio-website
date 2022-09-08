@@ -484,6 +484,9 @@ main{
     .skills-info,.personal-info{
         margin: auto;
     }
+      .Cookie-Wrapper{
+        left: 0 !important;
+    }
 
 }
 
