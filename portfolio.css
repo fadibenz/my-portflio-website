@@ -448,12 +448,7 @@ main{
         display: flex;
         align-items: center;
     }
-    .hexa-3{
-        display:none;
-    }
-    .hexa-1{
-        display:none;
-    }
+
 
     .nav-bar {
         background-color: white;
@@ -481,7 +476,7 @@ main{
 
 @media(max-width: 568px){
     .container{
-        max-width: 400px;
+        max-width: 300px;
     }
 }
 
