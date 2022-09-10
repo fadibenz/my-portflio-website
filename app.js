@@ -23,12 +23,14 @@ function hideWrap(){
 
 // toggle list 
 
-// const btn = document.querySelector(".mail")
-// const cont = document.querySelector(".containerr")
+const btn = document.querySelector(".toggle")
+const cont = document.querySelector(".containerr")
+const nav = document.querySelector(".nav-bar")
+btn.addEventListener("click",()=>{
+    nav.classList.toggle("show-nav")
+    cont.classList.toggle("show-cont")
 
-// btn.addEventListener("click",()=>{
-//     cont.classList.toggle("show-nav")
-// })
+})
 
 
 // modal 
@@ -44,3 +46,30 @@ btnPro.addEventListener("click",()=>{
 closePop.addEventListener("click",()=>{
     popupWrap.classList.remove("show-popup")
 })
+
+//smooth scroll 
+
+const scrollLinks = document.querySelectorAll(".scroll-link");
+scrollLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    // prevent default
+    e.preventDefault();
+    // navigate to specific spot
+    const id = e.currentTarget.getAttribute("href").slice(1);
+    const element = document.getElementById(id);
+
+    const navHeight = nav.getBoundingClientRect().height;
+    const containerHeight = cont.getBoundingClientRect().height;
+    let position = element.offsetTop - navHeight;
+
+    position = position + containerHeight;
+
+    window.scrollTo({
+      left: 0,
+      top: position,
+    });
+    // close
+    nav.classList.remove("show-nav") 
+    cont.classList.remove("show-cont")
+  });
+});
