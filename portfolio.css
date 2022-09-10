@@ -415,8 +415,19 @@ main{
         overflow-x: hidden;
     }
     
-
 }
+
+
+
+@media(max-device-width: 468px)
+{
+    html, html body {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        overflow-x: hidden;
+    }
+    
 
 @media(max-width: 1100px){
     video{
@@ -533,9 +544,17 @@ main{
     .Cookie-Wrapper{
         left: 0 !important;
     }
+    .skills-info{
+        margin-top: 40px !important;
+    }
+    .skills-info,.personal-info{
+        margin: auto;
+    }
+      .Cookie-Wrapper{
+        left: 0 !important;
+    }
+
 }
-
-
 
 
 /* .underline {
