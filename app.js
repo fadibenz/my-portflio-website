@@ -60,10 +60,12 @@ scrollLinks.forEach((link) => {
 
     const navHeight = nav.getBoundingClientRect().height;
     const containerHeight = cont.getBoundingClientRect().height;
-    let position = element.offsetTop - navHeight;
-
-    position = position + containerHeight;
-
+    let position = element.offsetTop 
+    const fixedNav = nav.classList.contains("show-nav");
+    if(fixedNav){
+      position = (position - navHeight) + containerHeight;
+    }
+    
     window.scrollTo({
       left: 0,
       top: position,
